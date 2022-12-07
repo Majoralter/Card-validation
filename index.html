@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Validation</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="/images/favicon-32x32.png" type="image/x-icon">
+</head>
+<body>
+    <main>
+        <section class="card-section">
+        <img src="images/bg-main-desktop.png" alt="A gradient background" class="gradient-background">
+        <div class="cards">
+        <div class="card-front">
+         <img src="images/card-logo.svg" alt="card logo" class="card-logo">
+
+         <h1> 0000 0000 0000 0000</h1>
+
+         <div class="secondary-details">
+            <p class="name">
+            Jenrola Jackson    
+            </p>
+            <p class="date">
+                00/00
+            </p>
+         </div>
+        </div>
+            <div class="card-back">
+        <p class="cvc"> 
+            000
+        </p>
+            </div>
+        </div>
+    </section>
+    <section class="input-section">
+        <p>
+            CARDHOLDER NAME
+        </p>
+        <input type="text" placeholder="e.g. Jenrola Jackson">
+
+        <p>
+            CARD NUMBER
+        </p>
+        <input type="number" placeholder="e.g. 1234 5678 9123 000">
+
+        <div class="other-details">
+            <div class="expiry-date">
+                <p>
+                    EXP. DATE (MM/YY)
+                </p>
+                <div class="date-inputs">
+                    <input type="number" placeholder="MM">
+                    <input type="number" placeholder="YY">
+                </div>
+            </div>
+            <div class="cvc-input">
+                <p class="cvc-text">
+                    CVC
+                </p>
+                <input type="number" placeholder="e.g. 123">
+            </div>
+        </div>
+
+    <button class="submit-btn">
+        Confirm
+    </button>
+    </section>
+    </main>
+</body>
+<script src="script.js"></script>
+</html>

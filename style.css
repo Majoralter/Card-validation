@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+:root{
+    --white: hsl(0, 0%, 100%);
+    --light-grayish-violet: hsl(270, 3%, 87%);
+    --dark-grayish-violet: hsl(279, 6%, 55%);
+    --very-dark-violet: hsl(278, 68%, 11%);
+}
+
+body{
+    overflow: hidden;
+}
+
+main{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-front{
+    background-image: url(images/bg-card-front.png);
+    background-size: contain;
+    background-repeat: repeat;
+    height: 250px;
+    width: 456px;
+    position: absolute;
+    z-index: 1000;
+    margin: 150px 20px 50px 150px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.card-back{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    background-image: url(images/bg-card-back.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 250px;
+    width: 456px;
+    position: absolute;
+    z-index: 1000;
+    margin: 430px 20px 20px 220px;
+    padding: 20px 50px 20px 20px;
+    border-radius: 10px;
+}
+
+.card-logo{
+    margin-bottom: 50px;
+}
+
+.card-front h1{
+    margin-bottom: 50px;
+    font-size: 27px;
+    color: var(--white);
+    letter-spacing: 5px;
+    font-weight: 500;
+}
+
+.secondary-details{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.name,.date,.cvc{
+    letter-spacing: 2px;
+    color: var(--white);
+    font-size: 16px;
+}
+
+.gradient-background{
+    position: absolute;
+    height: 100vh;
+}
+
+.input-section{
+    margin: 250px 400px 50px 250px;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 20vw;
+    align-items: flex-start;
+}
+
+.input-section p{
+    font-size: 14px;
+    color: var(--very-dark-violet);
+}
+
+::placeholder{
+    color: var(--light-grayish-violet);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input{
+    margin: 5px 0px 30px 0px;
+    color: var(--very-dark-violet);
+    font-size: 16px;
+    padding: 10px 30px 10px 20px;
+    width: 100%;
+    border: solid 1px var(--light-grayish-violet);
+    border-radius: 5px;
+    transition: .1s;
+}
+
+input[type=text]:focus {
+    border: solid 2px var(--very-dark-violet);
+}
+
+.other-details{
+    display: flex;
+}
+
+.date-inputs{
+    display: flex;
+}
+
+.date-inputs input{
+    margin: 5px 5px 5px 0px;
+    width: 80px;
+}
+
+.cvc-text{
+    margin-left: 20px;
+}
+
+.cvc-input input{
+    width: 85%;
+    margin-left: 20px;
+}
+
+.submit-btn{
+    cursor: pointer;
+    width: 100%;
+    padding: 15px 30px 15px 20px;
+    border: none;
+    background-color: var(--very-dark-violet);
+    color: var(--white);
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+
+/* RESPONSIVE  */
+
+@media (max-width:1180px) {
+body{
+    overflow: scroll;
+}
+
+    main{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+
+    .card-section{
+        margin: 0;
+        padding: 0;
+    }
+
+
+    .gradient-background{
+        margin: 0;
+        padding: 0;
+        width:  100vw;
+        height: 30vh;
+    }
+
+.card-logo{
+    height: 30px;
+    width: auto;
+    margin-bottom: 50px;
+}
+
+    .card-front{
+        position: absolute;
+        margin: 140px 0px 100px 15px;
+        height: 200px;
+        width: 340px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        z-index: 1000;
+    }
+    .card-front h1{
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+
+    .name,.date{
+        font-size: 12px;
+    }
+
+    .card-back{
+        position: absolute;
+        z-index: 0;
+        margin: 30px 40px 100px 50px;
+        height: 200px;
+        width: 340px;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .input-section{
+        margin: 200px 0px 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        width: 100vw;
+        align-items: flex-start;
+        padding: 0px 30px;
+    }
+}
+

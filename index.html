@@ -16,7 +16,7 @@
         <div class="card-front">
          <img src="images/card-logo.svg" alt="card logo" class="card-logo">
 
-         <h1> 0000 0000 0000 0000</h1>
+         <h1 id="card-number"> 0000 0000 0000 0000</h1>
 
          <div class="secondary-details">
             <p class="name">
@@ -38,12 +38,12 @@
         <p>
             CARDHOLDER NAME
         </p>
-        <input type="text" placeholder="e.g. Jenrola Jackson">
+        <input type="text" placeholder="e.g. Jenrola Jackson" id="user-name" onkeyup="updateText()">
 
         <p>
             CARD NUMBER
         </p>
-        <input type="number" placeholder="e.g. 1234 5678 9123 000">
+        <input type="text" placeholder="e.g. 1234 5678 9123 000" id="user-card-number" onkeyup="updateCardNumber()">
 
         <div class="other-details">
             <div class="expiry-date">
@@ -51,15 +51,15 @@
                     EXP. DATE (MM/YY)
                 </p>
                 <div class="date-inputs">
-                    <input type="number" placeholder="MM">
-                    <input type="number" placeholder="YY">
+                    <input type="number" placeholder="MM" id="expiry-month" onkeyup="updateExpiryDate()">
+                    <input type="number" placeholder="YY" id="expiry-year" onkeyup="updateExpiryDate()">
                 </div>
             </div>
             <div class="cvc-input">
                 <p class="cvc-text">
                     CVC
                 </p>
-                <input type="number" placeholder="e.g. 123">
+                <input type="number" placeholder="e.g. 123" id="user-cvc" onkeyup="updateCvc()">
             </div>
         </div>
 

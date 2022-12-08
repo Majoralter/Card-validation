@@ -35,37 +35,69 @@
         </div>
     </section>
     <section class="input-section">
-        <p>
-            CARDHOLDER NAME
-        </p>
-        <input type="text" placeholder="e.g. Jenrola Jackson" id="user-name" onkeyup="updateText()">
+        <div class="success">
+            <img src="images/icon-complete.svg" alt="checkmark">
+            <h1 class="success-text1">
+                Thank You!
+            </h1>
+            <p class="success-text2">
+                We've added your card details
+            </p>
+            <button type="submit" class="continue-btn">Continue</button>
+        </div>
 
-        <p>
-            CARD NUMBER
-        </p>
-        <input type="text" placeholder="e.g. 1234 5678 9123 000" id="user-card-number" onkeyup="updateCardNumber()">
-
-        <div class="other-details">
-            <div class="expiry-date">
-                <p>
+        <form  method="get" onsubmit="return false"  name="form" id="form">
+            <div>
+              <label>
+                CARDHOLDER NAME
+            </label>
+                <input type="text" placeholder="e.g Jane Appleseed" id="user-name" onkeyup="updateText()" name="username">
+                <div class="username-error">
+                    can't be blank
+                </div>
+            </div>
+            <div>
+                <label>
+                    CARD NUMBER 
+                </label>
+                    <input type="text" maxlength="19" placeholder="e.g 1234 5678 9123 0000" id="user-card-number" onkeyup="updateCardNumber()" name="cardnumber"> 
+                    <div class="card-number-error">
+                        can't be blank
+                    </div>               
+            </div>
+            <div class="additonal-details">
+            <div>
+                <label>
                     EXP. DATE (MM/YY)
-                </p>
-                <div class="date-inputs">
-                    <input type="number" placeholder="MM" id="expiry-month" onkeyup="updateExpiryDate()">
-                    <input type="number" placeholder="YY" id="expiry-year" onkeyup="updateExpiryDate()">
+                </label>
+                <div class="expiry-date">
+                    <div class="expirymonth">
+                        <input type="text" placeholder="MM" id="expiry-month" onkeyup="updateExpiryDate()" name="expirymonth">
+                        <div class="expiry-month-error">
+                            can't be blank
+                        </div>
+                    </div>
+                    <div class="expiryyear">
+                        <input type="text" placeholder="YY" id="expiry-year" onkeyup="updateExpiryDate()" name="expiryyear">
+                        <div class="expiry-year-error">
+                            can't be blank
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="cvc-input">
-                <p class="cvc-text">
+                <label>
                     CVC
-                </p>
-                <input type="number" placeholder="e.g. 123" id="user-cvc" onkeyup="updateCvc()">
+                </label>
+                    <input type="text" placeholder="e.g 123"  id="user-cvc" onkeyup="updateCvc()" name="usercvc">
+                    <div class="cvc-error">
+                        can't be blank
+                    </div>
             </div>
         </div>
 
-    <button class="submit-btn">
-        Confirm
-    </button>
+        <button class="submit-btn" onclick="validated()">Confirm</button>
+        </form>
     </section>
     </main>
 </body>
